@@ -45,4 +45,11 @@ Download Vol.5 > https://drive.google.com/drive/folders/1e3TFwzSl_cXioutScLxgYjw
 
 Download Vol.6 > https://drive.google.com/drive/folders/18CB3SvUVexW9hSkP4Yu6T45AKNl8OjL_?usp=drive_link
 
+<p>
+  <img src="https://raw.githubusercontent.com/umovoquebrado-svg/cowbellcultarchiveDownload.github.io/refs/heads/main/assets2/vol7.png" width="150" 
+  Vol.7
+</p>
+
+Download Vol.7 > COMING SOON!!!!!!!!!!!!!
+
 *everything on .flac format, the greatest format to listen to music*
