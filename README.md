@@ -17,7 +17,7 @@ Download Vol.1 > https://drive.google.com/drive/folders/1GNSb6H4re1IPuHWNdXD_JdV
 Download Vol.2 > https://drive.google.com/drive/folders/18H6wVXX5KkFIA-L-ikNtaqn5kI38nevI?usp=drive_link
 
 <p>
-  <img src="https://raw.githubusercontent.com/umovoquebrado-svg/cowbellcultarchiveDownload.github.io/refs/heads/main/assets2/vol3.jpg" width="150" 
+  <img src="https://raw.githubusercontent.com/umovoquebrado-svg/cowbellcultarchiveDownload.github.io/refs/heads/main/assets2/vol3.png" width="150" 
   Vol.1  
 </p>
   
