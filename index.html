@@ -33,7 +33,7 @@
   body{
     margin:0;
     background:
-      radial-gradient(1000px 600px at 50% -100px, rgba(35, 0, 106, 0.8) 0%, rgba(10,17,32,0) 70%),
+      radial-gradient(1200px 700px at 50% -100px, rgba(75, 10, 200, 0.45) 0%, rgba(35, 0, 106, 0.2) 50%, rgba(10,17,32,0) 80%),
       linear-gradient(180deg, var(--mid) 0%, var(--void) 100%);
     background-attachment:fixed;
     color:var(--ink);
@@ -217,14 +217,16 @@
   .tape .left .feat{color:var(--ink-dim);font-size:13.5px;margin-top:4px}
   .tape .right{display:flex;align-items:center;gap:12px}
   .fmt{font-family:"Space Mono",monospace;font-size:10px;letter-spacing:.1em;color:var(--chrome-lo);border:1px solid var(--steel);border-radius:3px;padding:4px 8px;white-space:nowrap}
+  
+  /* ---------- BOTÕES DE DOWNLOAD MAIORES ---------- */
   .dl{
-    font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+    font-family:"Space Mono",monospace;font-size:13.5px;letter-spacing:.12em;text-transform:uppercase;
     color:var(--void);font-weight:700;
     background:linear-gradient(180deg,#dfe6f0,#9aa6b8);
-    border:1px solid #c2ccda;border-radius:4px;padding:8px 16px;cursor:pointer;
-    box-shadow:inset 0 1px 0 rgba(255,255,255,.7);transition:.16s;white-space:nowrap;
+    border:1px solid #c2ccda;border-radius:5px;padding:12px 22px;cursor:pointer;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.8);transition:.16s;white-space:nowrap;
   }
-  .dl:hover{background:linear-gradient(180deg,#fff,#bcc7d8);box-shadow:inset 0 1px 0 rgba(255,255,255,.9),0 0 14px rgba(127,169,255,.35)}
+  .dl:hover{background:linear-gradient(180deg,#fff,#bcc7d8);box-shadow:inset 0 1px 0 rgba(255,255,255,.95),0 0 16px rgba(127,169,255,.45)}
 
   footer{
     max-width:1080px;margin:40px auto 0;padding:30px 22px 60px;border-top:1px solid var(--steel);
