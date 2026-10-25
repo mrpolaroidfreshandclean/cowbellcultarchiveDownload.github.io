@@ -3,7 +3,10 @@
 Archiving the phonk collective Cowbell Cult’s entire discography.
 
 <p>
-  <img src="https://raw.githubusercontent.com/umovoquebrado-svg/cowbellcultarchiveDownload.github.io/main/assets2/vol1.png" width="150" alt="Vol.1">
+  <text>
+  <img src="https://raw.githubusercontent.com/umovoquebrado-svg/cowbellcultarchiveDownload.github.io/main/assets2/vol1.png" width="150" 
+  <div class="Download >">
+  alt="Vol.1">
 </p>
 
 *everything on .flac format, the greatest format to listen to music*
