@@ -26,14 +26,14 @@
     --ink:#c4cdda;
     --ink-dim:#7a8497;
     --gold:#d8c06a;
-    --r:4px;
+    --r:6px;
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{
     margin:0;
     background:
-      radial-gradient(1200px 700px at 50% -200px, #11203a 0%, rgba(255, 0, 0, 0.8) 60%),
+      radial-gradient(1000px 600px at 50% -100px, rgba(47,107,255,0.15) 0%, rgba(10,17,32,0) 70%),
       linear-gradient(180deg, var(--mid) 0%, var(--void) 100%);
     background-attachment:fixed;
     color:var(--ink);
@@ -46,10 +46,11 @@
   /* subtle film grain / scanlines */
   body::after{
     content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;
-    background:repeating-linear-gradient(0deg, rgba(255, 0, 0, 0.8) 0 1px, transparent 1px 3px);
-    mix-blend-mode:overlay;opacity:.5;
+    background:repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.15) 0 1px, transparent 1px 3px);
+    mix-blend-mode:overlay;opacity:.6;
   }
-  a{color:var(--ice);text-decoration:none}
+  a{color:var(--ice);text-decoration:none;transition:color .2s}
+  a:hover{color:var(--chrome-hi)}
 
   .mono{font-family:"Space Mono",monospace}
   .eyebrow{
@@ -59,87 +60,73 @@
 
   /* ---------- chrome text ---------- */
   .chrome-text{
-    font-family:"Cinzel",serif;text-transform:uppercase;line-height:.98;font-weight:900;
+    font-family:"Cinzel",serif;text-transform:uppercase;line-height:1.05;font-weight:900;
     background:linear-gradient(180deg,#ffffff 0%,#d6dde8 36%,#7d8799 52%,#aeb9c9 54%,#f2f6fc 74%,#9aa5b6 100%);
     -webkit-background-clip:text;background-clip:text;color:transparent;
-    filter:drop-shadow(0 1px 0 rgba(0,0,0,.6)) drop-shadow(0 0 18px rgba(47,107,255,.12));
+    filter:drop-shadow(0 2px 4px rgba(0,0,0,.8)) drop-shadow(0 0 20px rgba(47,107,255,.2));
   }
 
   /* ---------- top bar / nav ---------- */
   header{
     position:sticky;top:0;z-index:50;
-    backdrop-filter:blur(10px);
-    background:linear-gradient(180deg, rgba(7,12,22,.92), rgba(7,12,22,.62));
+    backdrop-filter:blur(12px);
+    background:linear-gradient(180deg, rgba(7,12,22,.95), rgba(7,12,22,.75));
     border-bottom:1px solid var(--steel);
   }
   .bar{
-    max-width:1080px;margin:0 auto;padding:13px 22px;
+    max-width:1080px;margin:0 auto;padding:12px 22px;
     display:flex;align-items:center;justify-content:space-between;gap:16px;
   }
-  .brand{display:flex;align-items:center;gap:11px;min-width:0}
+  .brand{display:flex;align-items:center;gap:12px;min-width:0}
   .bell{
-    width:40px;height:40px;flex:0 0 auto;object-fit:contain;display:block;
-    filter:drop-shadow(0 0 6px rgba(127,169,255,.35));
+    width:36px;height:36px;flex:0 0 auto;object-fit:contain;display:block;
+    filter:drop-shadow(0 0 8px rgba(127,169,255,.4));
   }
   .brand b{
-    font-family:"Cinzel",serif;font-size:19px;letter-spacing:.06em;font-weight:700;
-    text-transform:uppercase;white-space:nowrap;
+    font-family:"Cinzel",serif;font-size:18px;letter-spacing:.08em;font-weight:700;
+    text-transform:uppercase;white-space:nowrap;color:var(--chrome-hi);
   }
-  nav{display:flex;gap:4px}
+  nav{display:flex;gap:6px}
   .tab{
-    font-family:"Space Mono",monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;
+    font-family:"Space Mono",monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;
     color:var(--chrome-lo);background:transparent;border:1px solid transparent;
-    padding:8px 13px;border-radius:var(--r);cursor:pointer;transition:.18s;
+    padding:8px 14px;border-radius:var(--r);cursor:pointer;transition:.2s;
   }
-  .tab:hover{color:var(--chrome-hi)}
+  .tab:hover{color:var(--chrome-hi);background:rgba(255,255,255,.03)}
   .tab.active{
     color:var(--chrome-hi);
     border-color:var(--steel-2);
     background:linear-gradient(180deg,#16243d,#0d1626);
-    box-shadow:inset 0 1px 0 rgba(255,255,255,.06), 0 0 14px rgba(47,107,255,.12);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.08), 0 0 14px rgba(47,107,255,.15);
   }
 
   main{max-width:1080px;margin:0 auto;padding:0 22px 90px}
-  .panel{display:none;animation:fade .5s ease}
+  .panel{display:none;animation:fade .4s ease-out}
   .panel.active{display:block}
-  @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 
   /* ---------- hero ---------- */
-  .hero{padding:64px 0 30px;position:relative;text-align:center}
+  .hero{padding:48px 0 24px;position:relative;text-align:center}
+  /* Reduzido o tamanho do título H1 */
   .hero .plate{
-    font-size:clamp(25px,13vw,50px);letter-spacing:.02em;margin:0;
+    font-size:clamp(36px, 6.5vw, 68px);
+    letter-spacing:.03em;
+    margin:0 auto;
+    max-width:800px;
   }
   .hero .sub{
     margin:14px auto 0;max-width:640px;color:var(--ink-dim);
-    font-size:16px;
+    font-size:16.5px;letter-spacing:.02em;
   }
-  .hero .meta{
-    margin-top:22px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap;
-  }
-  .chip{
-    font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;
-    color:var(--chrome);border:1px solid var(--steel);border-radius:40px;
-    padding:6px 13px;background:rgba(15,24,40,.6);
-  }
-  .chip b{color:var(--chrome-hi);font-weight:700}
-  .rec{display:inline-flex;align-items:center;gap:7px;color:var(--rust)}
-  .rec .dot{width:8px;height:8px;border-radius:50%;background:var(--rust);box-shadow:0 0 8px var(--rust);animation:blink 1.6s infinite}
-  @keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
 
   /* ---------- section heads ---------- */
-  .sec-head{margin:62px 0 6px;display:flex;align-items:baseline;gap:14px}
+  .sec-head{margin:48px 0 12px;display:flex;align-items:baseline;gap:14px}
   .sec-head h2{
     font-family:"Cinzel",serif;text-transform:uppercase;letter-spacing:.04em;font-weight:800;
-    font-size:clamp(26px,4.4vw,40px);margin:0;color:var(--chrome-hi);
+    font-size:clamp(24px,3.8vw,34px);margin:0;color:var(--chrome-hi);
   }
   .sec-head .num{font-family:"Space Mono",monospace;color:var(--ice);font-size:13px;letter-spacing:.1em}
-  .lede{color:var(--ink-dim);max-width:680px;margin:0 0 8px}
-
-  .prose{max-width:720px}
-  .prose p{margin:0 0 16px}
-  .prose b{color:var(--chrome-hi);font-weight:600}
-  .tag-name{color:var(--ice);font-weight:600}
-  .tag-gone{color:var(--rust);font-weight:600}
+  .lede{color:var(--ink-dim);max-width:680px;margin:0 0 16px;font-size:16px}
 
   /* ---------- timeline ---------- */
   .year-band{
@@ -156,7 +143,7 @@
   .tl-item::before{
     content:"";position:absolute;left:-34px;top:20px;width:13px;height:13px;border-radius:50%;
     background:var(--mid);border:2px solid var(--chrome-lo);
-    box-shadow:0 0 0 4px rgba(4,6,12,1);
+    box-shadow:0 0 0 4px var(--void);
   }
   .tl-item.k-release::before{border-color:var(--chrome);box-shadow:0 0 0 4px var(--void),0 0 10px rgba(170,180,196,.4)}
   .tl-item.k-gain::before{border-color:var(--ice);box-shadow:0 0 0 4px var(--void),0 0 12px rgba(127,169,255,.55)}
@@ -170,16 +157,16 @@
   .k-gain .kind{color:var(--ice);border-color:#2c4a86;background:rgba(47,107,255,.08)}
   .k-loss .kind{color:var(--rust);border-color:var(--rust-dim);background:rgba(200,114,72,.08)}
   .tl-date{font-family:"Space Mono",monospace;font-size:12px;color:var(--chrome-lo)}
-  .tl-title{font-size:20px;font-weight:600;color:var(--chrome-hi);margin:7px 0 3px;letter-spacing:.01em}
-  .tl-body{color:var(--ink-dim);font-size:15.5px;max-width:640px}
+  .tl-title{font-size:19px;font-weight:600;color:var(--chrome-hi);margin:6px 0 4px;letter-spacing:.01em}
+  .tl-body{color:var(--ink-dim);font-size:15px;max-width:640px}
   .struck{
     display:inline-block;font-family:"Space Mono",monospace;font-size:10px;letter-spacing:.1em;
-    color:var(--rust);border:1px solid var(--rust-dim);border-radius:3px;padding:1px 6px;margin-left:6px;vertical-align:middle;
+    color:var(--rust);border:1px solid var(--rust-dim);border-radius:3px;padding:1px 6px;margin-left:8px;vertical-align:middle;
   }
 
   /* ---------- archive status board ---------- */
   .board{
-    border:1px solid var(--steel);border-radius:8px;overflow:hidden;margin-top:18px;
+    border:1px solid var(--steel);border-radius:8px;overflow:hidden;margin-top:20px;
     background:linear-gradient(180deg,#101d33,#0a1322);
     box-shadow:inset 0 1px 0 rgba(255,255,255,.05);
   }
@@ -188,82 +175,77 @@
     padding:16px 20px;border-bottom:1px solid var(--steel);
     background:linear-gradient(180deg,#14253f,#0e1a2e);
   }
-  .board-top .name{font-family:"Cinzel",serif;letter-spacing:.05em;font-size:18px;font-weight:700;color:var(--chrome-hi);text-transform:uppercase}
+  .board-top .name{font-family:"Cinzel",serif;letter-spacing:.05em;font-size:17px;font-weight:700;color:var(--chrome-hi);text-transform:uppercase}
   .online{display:inline-flex;align-items:center;gap:8px;font-family:"Space Mono",monospace;font-size:12px;letter-spacing:.14em;color:var(--ice)}
-  .online .dot{width:9px;height:9px;border-radius:50%;background:var(--ice);box-shadow:0 0 10px var(--ice);animation:pulse 1.8s infinite}
-  @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+  .online .dot{width:8px;height:8px;border-radius:50%;background:var(--ice);box-shadow:0 0 10px var(--ice);animation:pulse 1.8s infinite}
+  @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.85)}}
   .grid-info{display:grid;grid-template-columns:repeat(2,1fr)}
   .info{
     padding:14px 20px;border-top:1px solid rgba(38,51,77,.6);border-right:1px solid rgba(38,51,77,.6);
   }
+  .info:last-child{border-right:none}
   .info .k{font-family:"Space Mono",monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--chrome-lo)}
   .info .v{margin-top:4px;color:var(--ink);font-size:15px}
   .info .v b{color:var(--chrome-hi)}
-
-  .note{
-    margin-top:14px;border-left:2px solid var(--rust-dim);background:rgba(200,114,72,.06);
-    padding:11px 16px;color:var(--ink-dim);font-size:14px;border-radius:0 4px 4px 0;
-  }
-  .note b{color:var(--rust)}
 
   /* ---------- cassette download list ---------- */
   .tapes{display:grid;gap:14px;margin-top:18px}
   .tape{
     display:flex;align-items:stretch;gap:0;border:1px solid var(--steel);border-radius:8px;overflow:hidden;
     background:linear-gradient(180deg,#0f1a2d,#0a1220);
-    transition:.22s;position:relative;
+    transition:.2s cubic-bezier(.2,.8,.2,1);position:relative;
   }
-  .tape:hover{border-color:var(--steel-2);box-shadow:0 10px 30px rgba(0,0,0,.45),0 0 0 1px rgba(127,169,255,.08);transform:translateY(-2px)}
+  .tape:hover{border-color:var(--steel-2);box-shadow:0 8px 25px rgba(0,0,0,.5),0 0 0 1px rgba(127,169,255,.1);transform:translateY(-2px)}
   .tape .cover{
-    flex:0 0 104px;width:104px;align-self:stretch;
-    display:block;position:relative;border-right:1px solid var(--steel);
+    flex:0 0 100px;width:100px;align-self:stretch;
+    display:flex;align-items:center;justify-content:center;position:relative;border-right:1px solid var(--steel);
     background:linear-gradient(180deg,#16243c,#0c1424);
     overflow:hidden;
   }
   .tape .cover img{
-    width:100%;height:100%;min-height:104px;object-fit:cover;display:block;
+    width:100%;height:100%;min-height:100px;object-fit:cover;display:block;
     filter:saturate(.9) contrast(1.03);transition:.25s;
   }
-  .tape:hover .cover img{filter:saturate(1.05) contrast(1.08);transform:scale(1.04)}
+  .tape:hover .cover img{filter:saturate(1.1) contrast(1.08);transform:scale(1.04)}
   .tape .cover::after{
     content:"";position:absolute;inset:0;pointer-events:none;
-    background:linear-gradient(120deg, rgba(127,169,255,.10), transparent 45%);
-    box-shadow:inset 0 0 30px rgba(0,0,0,.45);
+    background:linear-gradient(120deg, rgba(127,169,255,.08), transparent 50%);
+    box-shadow:inset 0 0 20px rgba(0,0,0,.4);
   }
-  .tape .body{flex:1;padding:15px 18px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
-  .tape .left .t{font-size:19px;font-weight:700;color:var(--chrome-hi);letter-spacing:.01em}
-  .tape .left .d{font-family:"Space Mono",monospace;font-size:12px;color:var(--chrome-lo);margin-top:3px}
-  .tape .left .feat{color:var(--ink-dim);font-size:13.5px;margin-top:5px}
-  .tape .right{display:flex;align-items:center;gap:10px}
-  .fmt{font-family:"Space Mono",monospace;font-size:10px;letter-spacing:.1em;color:var(--chrome-lo);border:1px solid var(--steel);border-radius:3px;padding:3px 7px;white-space:nowrap}
+  .tape .body{flex:1;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .tape .left .t{font-size:18px;font-weight:700;color:var(--chrome-hi);letter-spacing:.01em}
+  .tape .left .d{font-family:"Space Mono",monospace;font-size:12px;color:var(--chrome-lo);margin-top:2px}
+  .tape .left .feat{color:var(--ink-dim);font-size:13.5px;margin-top:4px}
+  .tape .right{display:flex;align-items:center;gap:12px}
+  .fmt{font-family:"Space Mono",monospace;font-size:10px;letter-spacing:.1em;color:var(--chrome-lo);border:1px solid var(--steel);border-radius:3px;padding:4px 8px;white-space:nowrap}
   .dl{
-    font-family:"Space Mono",monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;
+    font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;
     color:var(--void);font-weight:700;
     background:linear-gradient(180deg,#dfe6f0,#9aa6b8);
-    border:1px solid #c2ccda;border-radius:5px;padding:9px 16px;cursor:pointer;
+    border:1px solid #c2ccda;border-radius:4px;padding:8px 16px;cursor:pointer;
     box-shadow:inset 0 1px 0 rgba(255,255,255,.7);transition:.16s;white-space:nowrap;
   }
-  .dl:hover{background:linear-gradient(180deg,#fff,#bcc7d8);box-shadow:inset 0 1px 0 rgba(255,255,255,.9),0 0 18px rgba(127,169,255,.4)}
+  .dl:hover{background:linear-gradient(180deg,#fff,#bcc7d8);box-shadow:inset 0 1px 0 rgba(255,255,255,.9),0 0 14px rgba(127,169,255,.35)}
 
   footer{
-    max-width:1080px;margin:0 auto;padding:30px 22px 60px;border-top:1px solid var(--steel);
+    max-width:1080px;margin:40px auto 0;padding:30px 22px 60px;border-top:1px solid var(--steel);
     color:var(--chrome-lo);font-size:13px;
   }
-  footer .mono{font-size:11px;letter-spacing:.1em}
+  footer .mono{font-size:11px;letter-spacing:.12em}
   footer a{color:var(--chrome)}
 
   @media(max-width:640px){
     body{font-size:16px}
-    .bar{padding:11px 16px}
-    .brand b{font-size:17px}
-    nav{gap:2px}
-    .tab{padding:7px 9px;font-size:10.5px;letter-spacing:.06em}
+    .bar{padding:10px 16px}
+    .brand b{font-size:16px}
+    nav{gap:3px}
+    .tab{padding:6px 9px;font-size:10px;letter-spacing:.06em}
     main{padding:0 16px 70px}
     .grid-info{grid-template-columns:1fr}
     .info{border-right:none}
     .tape{flex-direction:column}
     .tape .cover{flex-basis:auto;width:100%;border-right:none;border-bottom:1px solid var(--steel)}
-    .tape .cover img{min-height:0;aspect-ratio:1/1;max-height:280px}
+    .tape .cover img{min-height:0;aspect-ratio:16/9;max-height:200px}
     .tape .body{justify-content:flex-start}
     .tape .right{width:100%;justify-content:space-between}
   }
@@ -279,7 +261,7 @@
 <header>
   <div class="bar">
     <div class="brand">
-      <img class="bell" src="assets2/cowbell2.png" alt="Cowbell Cult logo">
+      <img class="bell" src="assets2/cowbell2.png" alt="Cowbell Cult logo" onerror="this.style.display='none'">
       <b>Cowbell cult</b>
     </div>
     <nav>
@@ -299,19 +281,19 @@
       <p class="sub">Archiving Cowbell Cult members' tracks</p>
     </div>
 
-    <p class="lede" style="margin-top:20px">Head to <a href="#" data-jump="history">History</a> for the full release and member timeline, or <a href="#" data-jump="archive">Archive</a> for the tape downloads.</p>
+    <p class="lede" style="margin-top:20px; text-align:center;">Head to <a href="#" data-jump="history">History</a> for the full release and member timeline, or <a href="#" data-jump="archive">Archive</a> for the tape downloads.</p>
   </section>
 
   <!-- ============ HISTORY ============ -->
   <section class="panel" id="history">
-    <div class="sec-head" style="margin-top:50px"><h2>History</h2></div>
+    <div class="sec-head"><h2>History</h2></div>
     <p class="lede">Every release and member change on record, from the founding in October 2020 to the DMCA takedowns that ended the run in late 2024.</p>
     <div id="timeline-root"></div>
   </section>
 
   <!-- ============ ARCHIVE ============ -->
   <section class="panel" id="archive">
-    <div class="sec-head" style="margin-top:50px"><h2>Archive</h2></div>
+    <div class="sec-head"><h2>Archive</h2></div>
     <p class="lede">After the first community archive was copyright-struck and removed, a second project rebuilt the catalog and maintains it today.</p>
 
     <div class="board">
@@ -324,7 +306,8 @@
         <div class="info"><div class="k">Curated By</div><div class="v"><b>V1NZYMXNE</b> · <b>BANKFriteraN</b></div></div>
       </div>
     </div>
-    <div class="sec-head" style="margin-top:40px"><h2>Tape Vault</h2></div>
+
+    <div class="sec-head" style="margin-top:36px"><h2>Tape Vault</h2></div>
     <div class="tapes" id="tapes-root"></div>
   </section>
 
@@ -332,7 +315,7 @@
 
 <footer>
   <div class="mono">COWBELL CULT // FAN ARCHIVE</div>
-  <p style="margin:10px 0 0;max-width:680px">An unofficial tribute and archive. Not affiliated with the collective or any label. All tracks belong to their creators.</p>
+  <p style="margin:8px 0 0;max-width:680px">An unofficial tribute and archive. Not affiliated with the collective or any label. All tracks belong to their creators.</p>
 </footer>
 
 <script>
@@ -436,7 +419,7 @@
     const el=document.createElement('div');
     el.className='tape';
     el.innerHTML =
-      '<div class="cover"><img src="'+ART+x.img+'" alt="'+x.t+' cover art" loading="lazy"></div>'+
+      '<div class="cover"><img src="'+ART+x.img+'" alt="'+x.t+' cover art" loading="lazy" onerror="this.onerror=null;this.src=\'data:image/svg+xml;utf8,<svg xmlns=\\\'http://www.w3.org/2000/svg\\\' width=\\\'100\\\' height=\\\'100\\\' viewBox=\\\'0 0 100 100\\\"><rect width=\\\'100%\\\' height=\\\'100%\\\' fill=\\\'%2316243c\\\'/><text x=\\\'50%\\\' y=\\\'55%\\\' fill=\\\'%236b7588\\\' font-size=\\\'12\\\' font-family=\\\'sans-serif\\\' text-anchor=\\\'middle\\\'>No Cover</text></svg>\';"></div>'+
       '<div class="body">'+
         '<div class="left">'+
           '<div class="t">'+x.t+'</div>'+
