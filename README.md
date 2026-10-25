@@ -1,6 +1,6 @@
 # *Download every Cowbell Cult song with good quality*
 
-Archiving the phonk collective Cowbell Cult’s entire discography.
+Archiving the greatest phonk on earth Cowbell Cult’s entire discography.
 
 <p>
   <img src="https://raw.githubusercontent.com/umovoquebrado-svg/cowbellcultarchiveDownload.github.io/main/assets2/vol1.png" width="150" 
