@@ -50,6 +50,6 @@ Download Vol.6 > https://drive.google.com/drive/folders/18CB3SvUVexW9hSkP4Yu6T45
   Vol.7
 </p>
 
-Download Vol.7 > COMING SOON!!!!!!!!!!!!!
+Download Vol.7 > COMING SOON!!!!!!!!!!!!!(TONIGHT!!!)
 
 *everything on .flac format, the greatest format to listen to music*
