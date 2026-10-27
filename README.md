@@ -51,6 +51,7 @@ Download Vol.6 > https://drive.google.com/drive/folders/18CB3SvUVexW9hSkP4Yu6T45
   Vol.7
 </p>
 
-Download Vol.7 > COMING SOON!!!!!!!!!!!!!(TONIGHT!!!)
+(this files has been ripped from soundcloud, i don't know if it is the best quality)
+Download Vol.7 > https://drive.google.com/drive/folders/1vlvvvw1XUj1ra_Eqp94K_N-RbjxRh86k?usp=drive_link
 
 *everything on .flac format, the greatest format to listen to music*
