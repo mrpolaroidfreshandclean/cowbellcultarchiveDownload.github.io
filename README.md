@@ -8,7 +8,6 @@ What is flac format? > https://en.wikipedia.org/wiki/FLAC
   Vol.1  
 </p>
 
-vol. 1
 Download Vol.1 > https://drive.google.com/drive/folders/1GNSb6H4re1IPuHWNdXD_JdVyAI5BUivl?usp=drive_link
 
 <p>
